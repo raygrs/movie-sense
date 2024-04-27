@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar */
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.navegacao .nav_link{
+  list-style: none;
+  display: flex;
+}
+.nav_link li{
+padding-left: 20px;
+}
+.user img{
+  background-size: cover;
+}
+
+/* introducao */
+
+.container_introducao{
+  max-width: 50%;
+  padding: 2rem;
+}
+
+
+/* ONU */
+
+.ONU .container_ONU{
+  display: flex;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.conteudo_descritivo{
+  max-width: 50%;
+}
+
+/* vantagens */
+
+.vantagens_do_site{
+  padding: 5rem;
+}
+.container_vantagens{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container_vantagens p{
+  width: 20rem;
+}
+
+.estudos{
+  padding: 6rem;
+}
+
+.footer{
+display: flex;
+justify-content: space-around;
+padding: 5rem;
+}
