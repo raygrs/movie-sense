@@ -2,13 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 20px;
 }
 
 /* navbar */
 nav{
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  margin-top: -1rem;
+  color: #fff;
 }
 .navegacao .nav_link{
   list-style: none;
@@ -17,15 +19,62 @@ nav{
 .nav_link li{
 padding-left: 20px;
 }
-.user img{
-  background-size: cover;
+.logo h1{
+  font-size: 28px;
 }
 
 /* introducao */
 
+.introducao{
+  height: 80vh;
+  padding: 2rem;
+  background-image: url(../image/fundo_infiltrado.png);
+  background-size: 150vw;
+  background-size: 200vh;
+  background-repeat: no-repeat;
+}
+.introducao .fundo{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .container_introducao{
   max-width: 50%;
-  padding: 2rem;
+  margin-top: 3rem;
+  color: #fff;
+}
+.container_introducao h1{
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+.apresentacao_introducao{
+  width: 40vw;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.requisicao_logar{
+  display: flex;
+  flex-direction: column;
+}
+
+.requisicao_logar button{
+    height: 45px;
+    width: 40%;
+    color: #fff;
+    background-color: #3b3b3b;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+   
+}
+
+.fechamento_introducao{
+  margin-top: 1rem;
 }
 
 
@@ -34,7 +83,18 @@ padding-left: 20px;
 .ONU .container_ONU{
   display: flex;
   padding: 2rem;
-  gap: 3rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  /* background-color: #000; */
+}
+
+.conteudo_descritivo h2{
+font-size: 32px;
+margin-bottom: 2rem;
+}
+.pilar_img img{
+  /* border-radius: 50%; */
+  background-size: cover;
 }
 
 .conteudo_descritivo{
@@ -44,7 +104,14 @@ padding-left: 20px;
 /* vantagens */
 
 .vantagens_do_site{
-  padding: 5rem;
+  padding: 2rem;
+  background-color: #323232;
+  color: #fff;
+}
+
+.vantagens_do_site h2{
+  font-size: 32px;
+  /* padding: 1rem; */
 }
 .container_vantagens{
   display: flex;
@@ -55,14 +122,35 @@ padding-left: 20px;
 
 .container_vantagens p{
   width: 20rem;
+  margin-top: 1rem;
 }
 
 .estudos{
   padding: 6rem;
 }
 
+/* footer */
+
 .footer{
 display: flex;
-justify-content: space-around;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 padding: 5rem;
 }
+.container_footer{
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+}
+.container_footer ul{
+  display: flex;
+  gap: 2rem;
+  
+}
+.container_footer ul li{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
