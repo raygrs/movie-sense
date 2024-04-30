@@ -1,156 +1,146 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  background-color: #1e1e1e;
+  color: aliceblue;
 }
 
 /* navbar */
-nav{
+nav {
   display: flex;
   justify-content: space-between;
-  margin-top: -1rem;
+  margin-top: .5rem;
   color: #fff;
+  font-size: 18px;
+
 }
-.navegacao .nav_link{
+
+.navegacao .nav_link {
   list-style: none;
   display: flex;
 }
-.nav_link li{
-padding-left: 20px;
+
+.nav_link li {
+  padding-left: 20px;
 }
-.logo h1{
-  font-size: 28px;
+
+.logo h1 {
+  font-size: 20px;
 }
+
 
 /* introducao */
 
-.introducao{
-  height: 80vh;
+.introducao {
+  height: 100vh;
   padding: 2rem;
   background-image: url(../image/fundo_infiltrado.png);
   background-size: 150vw;
   background-size: 200vh;
   background-repeat: no-repeat;
 }
-.introducao .fundo{
+
+.introducao .fundo {
   z-index: 1;
   width: 100%;
   height: 100%;
 }
 
-.container_introducao{
+.container_introducao {
   max-width: 50%;
   margin-top: 3rem;
   color: #fff;
 }
-.container_introducao h1{
+
+.container_introducao h1 {
   margin-bottom: 1rem;
   font-size: 40px;
-}
-.apresentacao_introducao{
-  width: 40vw;
-  font-size: 20px;
-  margin-bottom: 2rem;
+  color: #5e5e5e;
 }
 
-.requisicao_logar{
-  display: flex;
-  flex-direction: column;
+.content {
+  position: relative;
+  z-index: 1;
+  width: 680px;
 }
 
-.requisicao_logar button{
-    height: 45px;
-    width: 40%;
-    color: #fff;
-    background-color: #3b3b3b;
-    border-radius: 3px;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    margin-bottom: 0.5rem;
-    margin-top: 1rem;
-   
-}
-
-.fechamento_introducao{
-  margin-top: 1rem;
-}
-
-
-/* ONU */
-
-.ONU .container_ONU{
-  display: flex;
-  padding: 2rem;
-  margin-top: 2rem;
-  justify-content: space-between;
-  /* background-color: #000; */
-}
-
-.conteudo_descritivo h2{
-font-size: 32px;
-margin-bottom: 2rem;
-}
-.pilar_img img{
-  /* border-radius: 50%; */
-  background-size: cover;
-}
-
-.conteudo_descritivo{
-  max-width: 50%;
-}
-
-/* vantagens */
-
-.vantagens_do_site{
-  padding: 2rem;
-  background-color: #323232;
+.movieTitle {
+  max-width: 250px;
   color: #fff;
 }
 
-.vantagens_do_site h2{
-  font-size: 32px;
-  /* padding: 1rem; */
-}
-.container_vantagens{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.content h4 {
+  color: rgba(255, 255, 2555, 0.5);
+  font-weight: 500;
 }
 
-.container_vantagens p{
-  width: 20rem;
-  margin-top: 1rem;
+.content h4 span {
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 2555, 0.5);
 }
 
-.estudos{
-  padding: 6rem;
+.content h4 span:first-child {
+  padding-left: 0;
 }
 
-/* footer */
+.content h4 span:last-child {
+  border-right: none;
+}
 
-.footer{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding: 5rem;
+.content h4 span i {
+  background: red;
+  color: #fff;
+  padding: 0 8px;
+  display: inline-block;
+  font-style: normal;
+  border-radius: 2px;
 }
-.container_footer{
-  display: flex;
-  margin-top: 1rem;
-  flex-direction: row;
+
+.content p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 10px 0 20px;
 }
-.container_footer ul{
-  display: flex;
-  gap: 2rem;
-  
+
+.content .buttons {
+  position: relative;
+  border-radius: 1rem;
 }
-.container_footer ul li{
-  display: flex;
-  flex-direction: row;
+
+.content .buttons a:hover {
+  background: rgb(194, 179, 179);
+}
+
+.content .buttons a:hover:nth-child(2) {
+  background: rgb(133, 109, 109);
+}
+
+ .content .buttons a {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  background: red;
+  color: #fff;
+  padding: 6px 23px;
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+ .content .buttons a:nth-child(2) {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 2555, 0.1);
+}
+.content, nav{
+  padding-inline: 2rem;
+}
