@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section{
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #151515;
+  color: aliceblue;
+  font-family:sans-serif;
+  
+}
+.container {
+  padding: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.login_box {
+  padding: 60px;
+  z-index: 101;
+  position: relative;
+  max-width: 450px;
+  height: 100%;
+  margin-left: 35%;
+  background-color: rgb(0, 0, 0, 0.75);
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+}
+
+h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-top: 0;
+  padding-bottom: 2rem;
+}
+
+.login_box input {
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+
+}
+.nameCompleto{
+  padding-bottom: 1rem;
+}
+
+.password {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.login_box input:hover {
+  background-color: #444;
+}
+
+.input_box {
+  margin-bottom: 25px;
+}
+
+.login_box .submit {
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  background-color: rgb(23, 125, 131);
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.login_box .submit:hover{
+  background: rgb(129, 165, 167);
+  cursor: pointer;
+}
+.autenticacao{
+  width: 80px;
+  height: 20px;
+  background-color: #333;
+  color: #bcbcbc;
+  border-radius: 3px;
+  font-size: 16px;
+  border: none;
+  margin-left: 10px;
+}
+.autenticacao:hover{
+  color: #151515;
+  background-color: #737373;
+  cursor: pointer;
+}
+
+.cadastro{
+  height: 70vh;
+}
+.password i{
+  font-size: 20px;
+  cursor: pointer;
+  color: #0d0c0c85;
+  position: absolute;
+  right: 6%;
+  top: 26%;
+}
+
+.cadastre-se {
+  color: #737373;
+  font-size: 15px;
+  margin-top: 1rem;
+}
+
+.cadastre-se a:hover,
+.terms a:hover,
+.sair a:hover {
+  text-decoration: underline;
+  color: #bcbcbc;
+}
+
+
+.terms {
+  color: #737373;
+  font-size: 13px;
+  margin-top: 1rem;
+}
+
+.terms a,
+.sair a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sair {
+  padding-top: 2rem;
+  font-size: 14px;
+  color: #737373;
+  font-size: 15px;
+
+}
+
+.error-text {
+  margin-top: .2rem;
+  color: #e50914d5;
+  font-size: 13px;
+}
+.error{
+  border: #e50914;
+}

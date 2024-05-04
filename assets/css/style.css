@@ -30,8 +30,9 @@ nav {
   padding-left: 20px;
 }
 
-.logo h1 {
-  font-size: 20px;
+.logo img{
+  height: 40px;
+  width: 80%;
 }
 .nav_link li{
   cursor: pointer;
@@ -299,6 +300,7 @@ nav {
 /* footer */
 .content-footer{
   padding: 4rem;
+  cursor: pointer;
 }
 .content-footer h1{
   margin-bottom: 2rem;
@@ -309,11 +311,15 @@ nav {
   gap: 2rem;
   color: #5e5e5e;
 }
+.content-footer .content-descricao-footer p:hover{
+  color: #fff;
+}
 .icons-footer{
   display: flex;
   justify-content: center;
   padding: 2rem;
   gap: .8rem;
+  cursor: pointer;
 }
 .icons-footer li{
   list-style: none;

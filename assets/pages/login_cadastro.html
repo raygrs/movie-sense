@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autenticação</title>
+  <link rel="stylesheet" href="../css/login_cadastro.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <!-- sessao login -->
+  <section class="main-container login">
+    <div class="container">
+      <div class="login_box">
+        <h2>Entrar</h2>
+        <form action="" method="post" class="formulario">
+          <div class="input-box">
+            <input type="text" id="user" class="user validar" placeholder="E-mail">
+          </div>
+          <div class="input-box password">
+            <input type="password" id="password" class="current-password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+          </div>
+          <div class="button">
+            <button onclick="entrar()" class="submit button">Entrar</button>
+          </div>
+        </form>
+
+        <div class="cadastre-se">
+          <p>Novo por aqui? <button class="autenticacao" onclick="cadastrar()"> cadastrar </button>
+        </div>
+        <div class="terms">
+          <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
+              mais</a></p>
+        </div>
+        <div class="sair">
+          <p>Deseja voltar para tela inicial? <a href="../../index.html">Sim</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sessao do cadastro -->
+  <section class="main-container cadastro" <center>
+    <div class="container">
+      <div class="login_box">
+        <h2>Cadastro</h2>
+        <form action="" method="post" class="formulario">
+          <div class="input-box">
+            <input type="text" id="user_cadastro" class="user_cadastro validar" placeholder="E-mail">
+          </div>
+          <div class="input-box password">
+            <input type="password" id="password" class="current-password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+          </div>
+          <div class="input-box password">
+            <input type="password" id="repet-password" class="current-password validar" placeholder="Repetir senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+          </div>
+          <div class="button">
+            <button onclick="cadastrar()" class="submit" class="submit">Enviar</button>
+          </div>
+        </form>
+
+        <div class="cadastre-se">
+          <p>Já tem uma conta? <button onclick="entrar()" class="autenticacao">Entrar</button></p>
+        </div>
+        <div class="terms">
+          <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
+              mais</a></p>
+        </div>
+        <div class="sair">
+          <p>Deseja voltar para tela inicial? <a href="../../index.html">Sim</a></p>
+        </div>
+      </div>
+    </div>
+    </center>
+  </section>
+<script src="../js/login_cadastro.js"></script>
+</body>
+
+</html>
