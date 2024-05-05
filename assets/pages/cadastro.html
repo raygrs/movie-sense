@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- sessao do cadastro -->
+  <section class="main-container cadastro" id="cadastro">
+    <center>
+      <div class="container">
+        <div class="cadastro_box">
+          <h2>Cadastro</h2>
+          <div class="input_box " id="input_user">
+            <input type="text" id="user_cadastro" class="user email validar" placeholder="E-mail">
+          </div>
+          <div class="input_box password" id="input_senha">
+            <input type="password" id="password" class="current-password password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+          </div>
+          <div class="input_box password" id="input_repetir_senha">
+            <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+          </div>
+          <div class="button">
+            <button onclick="cadastrar()" class="submit">Enviar</button>
+          </div>
+          <div id="mensagem" style="color: #ff0202;;"></div>
+
+
+          <div class="cadastre-se">
+            <p>Já tem uma conta? <a href="../pages/login.html"><button class="autenticacao">Entrar</button></p></a>
+          </div>
+          <div class="terms">
+            <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
+                mais</a></p>
+          </div>
+          <div class="sair">
+            <p>Deseja voltar para tela inicial? <a href="../../index.html">Sim</a></p>
+          </div>
+        </div>
+      </div>
+    </center>
+  </section>
+</body>
+
+</html>
+<script>
+
+  function cadastrar() {
+    const EMAIL = user_cadastro.value;
+    const SENHA = password.value;
+    const REPETIR = repet_password.value;
+
+    if (EMAIL == '' || SENHA == '' || REPETIR == '') {
+      mensagem.innerHTML = 'Preencha todos os campos'
+      input_user.classList.add('erro_box');
+      input_senha.classList.add('erro_box');
+      input_repetir_senha.classList.add('erro_box');
+    } else {
+      if (EMAIL.length < 6) {
+        input_user.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo email está inválido'
+      } else {
+        input_user.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+
+      if (SENHA.length < 6) {
+        input_senha.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo senha está inválido'
+      } else {
+        input_senha.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+
+      if (REPETIR != SENHA) {
+        input_repetir_senha.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo repetir senha está inválido'
+      } else {
+        input_repetir_senha.classList.remove('erro_box');
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+</script>
