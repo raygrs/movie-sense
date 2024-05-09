@@ -52,14 +52,8 @@ h2 {
   padding-left: 15px;
   box-sizing: border-box;
   outline: none;
-
 }
-.nameCompleto{
-  padding-bottom: 1rem;
-}
-
 .password {
-  margin-top: 1rem;
   position: relative;
 }
 
@@ -81,7 +75,6 @@ h2 {
   font-size: 16px;
   border: none;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .login_box .submit:hover{
@@ -155,6 +148,14 @@ h2 {
   color: #e50914d5;
   font-size: 13px;
 }
+.erro_box {
+  border-radius: 8px;
+  border: 2px solid rgba(201, 14, 14, 0.989);
+}
+
 .error{
-  border: #e50914;
+  color: #e50914;
+}
+#mensagem{
+  color: #e50914;
 }

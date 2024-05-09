@@ -64,7 +64,6 @@ h2 {
 .cadastro_box input:hover {
   background-color: #444;
 }
-
 .input_box,
 .cadastro_box {
   margin-bottom: 25px;
@@ -107,13 +106,14 @@ h2 {
 .cadastro{
   height: 70vh;
 }
-.password i{
+.password i,
+.repetir_senha i{
   font-size: 20px;
   cursor: pointer;
-  color: #0d0c0c85;
+  color: #00000085;
   position: absolute;
-  right: 6%;
-  top: 26%;
+  right: 18%;
+  top: 35%;
 }
 
 .cadastre-se {
@@ -156,7 +156,4 @@ h2 {
 
 .error{
   color: #e50914;
-}
-.correct{
-  color: #00ff51;
 }

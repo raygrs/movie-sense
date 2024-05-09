@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/cadastro.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Autenticação</title>
 </head>
 
 <body>
@@ -22,16 +23,13 @@
             <input type="password" id="password" class="current-password password validar" placeholder="senha">
             <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
           </div>
-          <div class="input_box password" id="input_repetir_senha">
+          <div class="input_box repetir_senha" id="input_repetir_senha">
             <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir senha">
-            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
           </div>
           <div class="button">
             <button onclick="cadastrar()" class="submit">Enviar</button>
           </div>
           <div id="mensagem" style="color: #ff0202;;"></div>
-
-
           <div class="cadastre-se">
             <p>Já tem uma conta? <a href="../pages/login.html"><button class="autenticacao">Entrar</button></p></a>
           </div>
@@ -50,7 +48,6 @@
 
 </html>
 <script>
-
   function cadastrar() {
     const EMAIL = user_cadastro.value;
     const SENHA = password.value;
@@ -64,7 +61,7 @@
     } else {
       if (EMAIL.length < 6) {
         input_user.classList.add('erro_box');
-        mensagem.innerHTML = 'O campo email está inválido'
+        mensagem.innerHTML = 'O campo email deve conter mais de 6 caracteres'
       } else {
         input_user.classList.remove('erro_box');
         mensagem.innerHTML = '';
@@ -72,7 +69,7 @@
 
       if (SENHA.length < 6) {
         input_senha.classList.add('erro_box');
-        mensagem.innerHTML = 'O campo senha está inválido'
+        mensagem.innerHTML = 'O campo senha deve conter mais de 6 caracteres'
       } else {
         input_senha.classList.remove('erro_box');
         mensagem.innerHTML = '';
@@ -84,15 +81,12 @@
       } else {
         input_repetir_senha.classList.remove('erro_box');
       }
-    }
 
+      if( EMAIL.indexOf('@') < 0){
+      console.log('entrou no if');
+        mensagem.innerHTML = 'O campo email está inválido '
+        input_user.classList.add('erro_box');
   }
-
-
-
-
-
-
-
-
+    }
+  }
 </script>
