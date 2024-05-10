@@ -20,15 +20,16 @@
             <input type="text" id="user_inp" class="user email validar" placeholder="E-mail">
           </div>
           <div class="input_box password" id="input_senha">
-            <input type="password" id="password" class="current-password password validar" placeholder="senha">
-            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+            <input type="password" id="input_senha_" class="current-password password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="mostrarSenha()"></i>
           </div>
           <div class="button">
             <button onclick="entrar()" class="submit button">Entrar</button>
           </div>
           <div id="mensagem"></div>
           <div class="cadastre-se">
-            <span>Novo por aqui?</span><a href="../pages/cadastro.html"><button class="autenticacao"> cadastrar </button></a> 
+            <span>Novo por aqui?</span><a href="../pages/cadastro.html"><button class="autenticacao"> cadastrar
+              </button></a>
           </div>
           <div class="terms">
             <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
@@ -45,9 +46,22 @@
 
 </html>
 <script>
+  function mostrarSenha() {
+    const SENHA_INPUT = document.getElementById('input_senha_');
+    const ICON = document.getElementById('iconPass');
+
+    if (SENHA_INPUT.type === 'password') {
+      SENHA_INPUT.type = 'text';
+      ICON.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+    } else {
+      SENHA_INPUT.type = 'password';
+      ICON.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+    }
+  }
+
   function entrar() {
     const USER = user_inp.value;
-    const SENHA = password.value;
+    const SENHA = input_senha_.value;
 
     if (USER == '' || SENHA == '') {
       mensagem.innerHTML = 'Preencha todos os campos'
@@ -69,12 +83,15 @@
         input_senha.classList.remove('erro_box');
         mensagem.innerHTML = '';
       }
-      if( USER.indexOf('@') < 0){
-      console.log('entrou no if');
+      if (USER.indexOf('@') < 0) {
+        console.log('entrou no if');
         mensagem.innerHTML = 'O campo email está inválido '
         input_user.classList.add('erro_box');
+      }else {
+        // Todas as validações passaram, redirecione para a página da cruzadinha
+        window.location.href = "Cruzadinha.html";
+      }
+    }
   }
-  }
-}
 
 </script>

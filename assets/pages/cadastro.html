@@ -20,8 +20,8 @@
             <input type="text" id="user_cadastro" class="user email validar" placeholder="E-mail">
           </div>
           <div class="input_box password" id="input_senha">
-            <input type="password" id="password" class="current-password password validar" placeholder="senha">
-            <i class="bi bi-eye-fill" id="iconPass" onclick="lookPassword()"></i>
+            <input type="password" id="input_senha_" class="current-password password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="mostrarSenha()"></i>
           </div>
           <div class="input_box repetir_senha" id="input_repetir_senha">
             <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir senha">
@@ -48,9 +48,22 @@
 
 </html>
 <script>
+  function mostrarSenha() {
+    const SENHA_INPUT = document.getElementById('input_senha_');
+    const ICON = document.getElementById('iconPass');
+
+    if (SENHA_INPUT.type === 'password') {
+      SENHA_INPUT.type = 'text';
+      ICON.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+    } else {
+      SENHA_INPUT.type = 'password';
+      ICON.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+    }
+  }
+
   function cadastrar() {
     const EMAIL = user_cadastro.value;
-    const SENHA = password.value;
+    const SENHA = input_senha_.value;
     const REPETIR = repet_password.value;
 
     if (EMAIL == '' || SENHA == '' || REPETIR == '') {
@@ -82,11 +95,11 @@
         input_repetir_senha.classList.remove('erro_box');
       }
 
-      if( EMAIL.indexOf('@') < 0){
-      console.log('entrou no if');
+      if (EMAIL.indexOf('@') < 0) {
+        console.log('entrou no if');
         mensagem.innerHTML = 'O campo email está inválido '
         input_user.classList.add('erro_box');
-  }
+      }
     }
   }
 </script>
