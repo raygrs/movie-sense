@@ -16,6 +16,9 @@
       <div class="container">
         <div class="cadastro_box">
           <h2>Cadastro</h2>
+          <div class="input_box userName" id="input_user_name">
+            <input type="text" id="user_name" class="userName validar" placeholder="userName">
+          </div>
           <div class="input_box " id="input_user">
             <input type="text" id="user_cadastro" class="user email validar" placeholder="E-mail">
           </div>
@@ -65,13 +68,16 @@
     const EMAIL = user_cadastro.value;
     const SENHA = input_senha_.value;
     const REPETIR = repet_password.value;
+    const USERNAME = user_name.value;
 
-    if (EMAIL == '' || SENHA == '' || REPETIR == '') {
+    if (EMAIL == '' || SENHA == '' || REPETIR == '' || USERNAME == '') {
       mensagem.innerHTML = 'Preencha todos os campos'
       input_user.classList.add('erro_box');
+      input_user_name.classList.add('erro_box');
       input_senha.classList.add('erro_box');
       input_repetir_senha.classList.add('erro_box');
     } else {
+      input_user_name.classList.remove('erro_box');
       if (EMAIL.length < 6) {
         input_user.classList.add('erro_box');
         mensagem.innerHTML = 'O campo email deve conter mais de 6 caracteres'
