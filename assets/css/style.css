@@ -29,6 +29,11 @@ nav {
 .nav_link li {
   padding-left: 20px;
 }
+.nav_link li a{
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
 
 .logo img{
   height: 22px;
@@ -44,7 +49,7 @@ nav {
 /* introducao */
 
 .introducao {
-  height: 100vh;
+  height: 98vh;
   padding: 2rem;
   background-image: url(../image/movies/imagem\ principal.jpg);
   background-size: 150vw;
@@ -226,10 +231,10 @@ nav {
 
 .movie-list-item-img {
   transition: all 1s ease-in-out;
-  width: 290px;
-  height: 190px;
+  width: 280px;
+  height: 180px;
   margin-top: 3rem;
-  border-radius: 10px;
+  border-radius: 5px;
   
 }
 

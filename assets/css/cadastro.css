@@ -5,7 +5,8 @@
 }
 
 section{
-  height: 100vh;
+  height: 90vh;
+  
 }
 
 body {
@@ -103,9 +104,9 @@ h2 {
   cursor: pointer;
 }
 
-.cadastro{
-  height: 70vh;
-}
+/* .cadastro{
+  height: 50vh;
+} */
 .password i,
 .repetir_senha i{
   font-size: 20px;
