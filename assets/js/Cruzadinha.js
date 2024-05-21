@@ -18,6 +18,14 @@ function relogio() {
         }, 1000);
     }
 
+    relogio.classList.remove('pausado');
+    clearInterval(timer);
+    iniciaRelogio();
+
+
+    // let tempo = document.getElementById('relogio');
+    // console.log(tempo.innerHTML);
+
     document.addEventListener('click', function (e) {
         const el = e.target;
 

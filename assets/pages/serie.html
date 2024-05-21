@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Séries</title>
+  <link rel="stylesheet" href="../css/serie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+     <div class="logo">
+       <img src="../image/movie_logo.png" alt="Logo">
+     </div>
+     <div class="navegacao">
+       <ul class="nav_link">
+         <li> <a href="../../index.html">Home</a></li>
+         <li> <a href="../pages/serie.html">Séries</li></a><!-- na parte de séries depois criar um select especificando os filmes -->
+         <li> <a href="../pages/filmes.html">Filmes</li></a>
+         <li> <a href="">Minha lista</li></a>
+       </ul>
+     </div>
+    </div>
+   </nav>
+
+   <div class="title">
+    <h1>Séries</h1>
+    <select id="selectCategoria">
+    <option value="#">Selecione uma categoria</option>
+    <option value="acao">Ação</option>
+    <option value="romance">Romance</option>
+    <option value="adolescente">Adolescente</option>
+    <option value="comedia">Comédia</option>
+    </select>
+   </div>
+
+    <section>
+      <div class="movie-list-container" id="elenco">
+        <div class="heading" id="acao">
+          <p>Sugestões de séries cliches</p>
+        </div>
+  
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o infiltrado" class="movie-list-item-img">
+              <span class="movie-list-item-title">O INFILTRADO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O INFILTRADO</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o protetor" class="movie-list-item-img">
+              <span class="movie-list-item-title">O PROTETOR</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O PROTETOR</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="assasino a preco fixo"
+                class="movie-list-item-img">
+              <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>ASSASSINO A PREÇO FIXO</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="lupin" class="movie-list-item-img">
+              <span class="movie-list-item-title">SWAT</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>SWAT</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="os bad boys" class="movie-list-item-img">
+              <span class="movie-list-item-title">OS BAD BOYS</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>OS BAD BOYS</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+              <span class="movie-list-item-title">DONZELA</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>DONZELA</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="acott-personagem" class="movie-list-item-img">
+              <span class="movie-list-item-title">DNA DO CRIME</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>DNA DO CRIME</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="movie-list-container" id="elenco">
+        <div class="heading" id="acao">
+          <p>Sugestões de séries para assistir com a família</p>
+        </div>
+  
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o infiltrado" class="movie-list-item-img">
+              <span class="movie-list-item-title">O INFILTRADO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O INFILTRADO</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o protetor" class="movie-list-item-img">
+              <span class="movie-list-item-title">O PROTETOR</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O PROTETOR</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="assasino a preco fixo"
+                class="movie-list-item-img">
+              <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>ASSASSINO A PREÇO FIXO</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="lupin" class="movie-list-item-img">
+              <span class="movie-list-item-title">SWAT</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>SWAT</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="os bad boys" class="movie-list-item-img">
+              <span class="movie-list-item-title">OS BAD BOYS</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>OS BAD BOYS</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+              <span class="movie-list-item-title">DONZELA</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>DONZELA</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="acott-personagem" class="movie-list-item-img">
+              <span class="movie-list-item-title">DNA DO CRIME</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>DNA DO CRIME</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="movie-list-container" id="elenco">
+        <div class="heading" id="acao">
+          <p>Sugestões de séries de aventura e ação</p>
+        </div>
+  
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o infiltrado" class="movie-list-item-img">
+              <span class="movie-list-item-title">O INFILTRADO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O INFILTRADO</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o protetor" class="movie-list-item-img">
+              <span class="movie-list-item-title">O PROTETOR</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O PROTETOR</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="assasino a preco fixo"
+                class="movie-list-item-img">
+              <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>ASSASSINO A PREÇO FIXO</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="lupin" class="movie-list-item-img">
+              <span class="movie-list-item-title">SWAT</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>SWAT</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="os bad boys" class="movie-list-item-img">
+              <span class="movie-list-item-title">OS BAD BOYS</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>OS BAD BOYS</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+              <span class="movie-list-item-title">DONZELA</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>DONZELA</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="acott-personagem" class="movie-list-item-img">
+              <span class="movie-list-item-title">DNA DO CRIME</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>DNA DO CRIME</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="movie-list-container" id="elenco">
+        <div class="heading" id="acao">
+          <p>Sugestões de séries infantil</p>
+        </div>
+  
+        <div class="movie-list-wrapper">
+          <div class="movie-list">
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o infiltrado" class="movie-list-item-img">
+              <span class="movie-list-item-title">O INFILTRADO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O INFILTRADO</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="o protetor" class="movie-list-item-img">
+              <span class="movie-list-item-title">O PROTETOR</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>O PROTETOR</p>
+              </div>
+            </div>
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="assasino a preco fixo"
+                class="movie-list-item-img">
+              <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>ASSASSINO A PREÇO FIXO</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="lupin" class="movie-list-item-img">
+              <span class="movie-list-item-title">SWAT</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>SWAT</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="os bad boys" class="movie-list-item-img">
+              <span class="movie-list-item-title">OS BAD BOYS</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>OS BAD BOYS</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+              <span class="movie-list-item-title">DONZELA</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam
+              <div class="movie-list-item-subdesc">
+                <p>DONZELA</p>
+                <p>Action | 120min</p>
+              </div>
+            </div>
+  
+            <div class="movie-list-item">
+              <img src="../image/movies/13 reasons why.png" alt="acott-personagem" class="movie-list-item-img">
+              <span class="movie-list-item-title">DNA DO CRIME</span>
+              <p class="movie-list-item-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+                deserunt quae totam, pariatur doloribus aspernatur </p>
+  
+              <div class="movie-list-item-subdesc">
+                <p>DNA DO CRIME</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <center>
+        <div class="content-footer">
+          <div class="logo">
+            <h1>Movie Sense</h1>
+          </div>
+          <div class="content-descricao-footer">
+            <p>Termos e avisos de privacidade</p>
+            <p>Envie-nos comentários</p>
+            <p>Codyrigth ©2023 CodeOpacity.</p>
+          </div>
+          <div class="icons-footer">
+            <li><a href="#">
+            <li><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-email"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://github.com/raygrs/movie-sense.git"><i class="fa fa-github"></i></a></li>
+          </div>
+        </div>
+      </center>
+    </section>
+</body>
+</html>
