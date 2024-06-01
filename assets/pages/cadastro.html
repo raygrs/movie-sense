@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/cadastro.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+  integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
   <title>Autenticação</title>
 </head>
 
@@ -17,17 +19,17 @@
         <div class="cadastro_box">
           <h2>Cadastro</h2>
           <div class="input_box userName" id="input_user_name">
-            <input type="text" id="user_name" class="userName validar" placeholder="userName">
+            <input type="text" id="user_name" class="userName validar" placeholder="Nome de usuário">
           </div>
           <div class="input_box " id="input_user">
             <input type="text" id="user_cadastro" class="user email validar" placeholder="E-mail">
           </div>
           <div class="input_box password" id="input_senha">
-            <input type="password" id="input_senha_" class="current-password password validar" placeholder="senha">
+            <input type="password" id="input_senha_" class="current-password password validar" placeholder="Senha">
             <i class="bi bi-eye-fill" id="iconPass" onclick="mostrarSenha()"></i>
           </div>
           <div class="input_box repetir_senha" id="input_repetir_senha">
-            <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir senha">
+            <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir Senha">
           </div>
           <div class="button">
             <button onclick="cadastrar()" class="submit">Enviar</button>

@@ -5,24 +5,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: #151515;
   color: aliceblue;
   font-size: 18px;
   /* overflow: hidden; */
+}
+
+body{
+  background-color: #151515;
+  color: #ffffff;
 }
 /* navbar */
 nav {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  /* margin-top: 8rem; */
   /* padding: 1rem; */
   color: #fff;
+  
   
 }
 .nav-container{
   display: flex;
   justify-content: space-between;
   gap: 50rem;
+  margin-top: 2rem;
   /* margin-left: 1.5rem; */
 }
 .navegacao .nav_link {
@@ -61,11 +67,14 @@ nav {
   display: flex;
 }
 .title select{
-  width: 18%;
+  width: 10%;
   height: 2rem;
   margin-top: 2rem;
   margin-left: 12px;
+  opacity: .5;
+  background-color: #151515;
 }
+
 
 /* estilizando o conteuddo do slide  */
 .heading{
@@ -98,7 +107,7 @@ nav {
 .movie-list {
   display: flex;
   align-items: center;
-  height: 350px;
+  height: 330px;
   transform: translateX(0);
   transition: all 1s ease-in-out;
   margin-top: -3rem;
@@ -138,7 +147,7 @@ nav {
 .movie-list-item-img {
   transition: all 1s ease-in-out;
   width: 280px;
-  height: 180px;
+  height: 170px;
   margin-top: 3rem;
   border-radius: 5px;
   

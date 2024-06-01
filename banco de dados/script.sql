@@ -13,6 +13,7 @@ INSERT INTO Usuario VALUES
 (DEFAULT, 'ray.grs', 'ray@grs25@gmail.com', '043009ray', '043009ray'),
 (DEFAULT, 'anneCruz', 'anne@grs25@gmail.com', '043009ane', '043009ane');
 
+select * from usuario;
 
 CREATE TABLE Jogo (
 idJogo INT PRIMARY KEY AUTO_INCREMENT,
@@ -23,6 +24,7 @@ momento DATETIME
 INSERT INTO Jogo VALUES 
 (1, 'quiz', now()),
 (2, 'cruzadinha', now());
+
 
 
 CREATE TABLE Pontuacao (

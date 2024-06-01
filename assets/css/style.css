@@ -18,7 +18,7 @@ nav {
   justify-content: space-between;
   margin-top: .5rem;
   color: #fff;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 .navegacao .nav_link {
   list-style: none;
@@ -161,6 +161,18 @@ nav {
   padding-inline: 2rem;
 }
 
+span .logount{
+  width: 50px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  height: 20px;
+  text-decoration: none;
+}
+span .logount a{
+  text-decoration: none;
+}
+
 /* estilizando o conteuddo do slide  */
 .heading{
   padding-top: 2rem;
@@ -232,8 +244,8 @@ nav {
 .movie-list-item-img {
   transition: all 1s ease-in-out;
   width: 280px;
-  height: 180px;
-  margin-top: 3rem;
+  height: 170px;
+  margin-top: 2rem;
   border-radius: 5px;
   
 }
@@ -299,6 +311,9 @@ nav {
 }
 .ver_tudo:hover{
   display: block;
+}
+button.logount{
+  background-color: #fff;
 }
 
 /* footer */
