@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../../css/cadastro.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Autenticação</title>
+
+  <!-- <script src="/js/"></script> -->
+</head>
+
+<body>
+  <!-- sessao do cadastro -->
+  <section class="main-container cadastro" id="cadastro">
+    <center>
+      <div class="container">
+        <div class="cadastro_box">
+          <h2>Cadastro</h2>
+          <div class="input_box userName" id="input_user_name">
+            <input type="text" id="user_name" class="userName validar" placeholder="userName">
+          </div>
+          <div class="input_box " id="input_user">
+            <input type="text" id="user_cadastro" class="user email validar" placeholder="E-mail">
+          </div>
+          <div class="input_box password" id="input_senha">
+            <input type="password" id="input_senha_" class="current-password password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="mostrarSenha()"></i>
+          </div>
+          <div class="input_box repetir_senha" id="input_repetir_senha">
+            <input type="password" id="repet_password" class="current-password validar" placeholder="Repetir senha">
+          </div>
+          <div class="button">
+            <button onclick="cadastrar()" class="submit">Cadastrar</button>
+          </div>
+          <div id="mensagem" style="color: #ff0202;;"></div>
+          <div class="cadastre-se">
+            <p>Já tem uma conta? <a href="../pages/login.html"><button class="autenticacao">Entrar</button></p></a>
+          </div>
+          <div class="terms">
+            <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
+                mais</a></p>
+          </div>
+          <div class="sair">
+            <p>Deseja voltar para tela inicial? <a href="../../index.html">Sim</a></p>
+          </div>
+        </div>
+      </div>
+    </center>
+  </section>
+</body>
+
+</html>
+<script>
+  function mostrarSenha() {
+    const SENHA_INPUT = document.getElementById('input_senha_');
+    const ICON = document.getElementById('iconPass');
+
+    if (SENHA_INPUT.type === 'password') {
+      SENHA_INPUT.type = 'text';
+      ICON.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+    } else {
+      SENHA_INPUT.type = 'password';
+      ICON.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+    }
+  }
+
+  // função cadastrar do aquatech
+
+  function cadastrar() {
+    const EMAIL = user_cadastro.value;
+    const SENHA = input_senha_.value;
+    const REPETIR = repet_password.value;
+    const USERNAME = user_name.value;
+
+    if (EMAIL == '' || SENHA == '' || REPETIR == '' || USERNAME == '') {
+      mensagem.innerHTML = 'Preencha todos os campos'
+      input_user.classList.add('erro_box');
+      input_user_name.classList.add('erro_box');
+      input_senha.classList.add('erro_box');
+      input_repetir_senha.classList.add('erro_box');
+    } else {
+      input_user_name.classList.remove('erro_box');
+      if (EMAIL.length < 6) {
+        input_user.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo email deve conter mais de 6 caracteres'
+      } else {
+        input_user.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+
+      if (SENHA.length < 6) {
+        input_senha.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo senha deve conter mais de 6 caracteres'
+      } else {
+        input_senha.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+
+      if (REPETIR != SENHA) {
+        input_repetir_senha.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo repetir senha está inválido'
+      } else {
+        input_repetir_senha.classList.remove('erro_box');
+      }
+
+      if (EMAIL.indexOf('@') < 0) {
+        console.log('entrou no if');
+        mensagem.innerHTML = 'O campo email está inválido '
+        input_user.classList.add('erro_box');
+      }
+    }
+
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = user_name.value;
+    var emailVar = user_cadastro.value;
+    var senhaVar = input_senha_.value;
+    var confirmacaoSenhaVar = repet_password.value;
+    // var empresaVar = listaEmpresas.value
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      finalizarAguardar();
+      return false;
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+</script>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Séries</title>
+  <link rel="stylesheet" href="../../css/serie.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+     <div class="logo">
+       <img src="../image/movie_logo.png" alt="Logo">
+     </div>
+     <div class="navegacao">
+       <ul class="nav_link">
+         <li> <a href="../../index.html">Home</a></li>
+         <li> <a href="../pages/serie.html">Séries</li></a><!-- na parte de séries depois criar um select especificando os filmes -->
+         <li> <a href="../pages/filmes.html">Filmes</li></a>
+         <li> <a href="./Cruzadinha.html">Cruzadinha</li></a>
+       </ul>
+     </div>
+    </div>
+   </nav>
+
+   <div class="title">
+    <h1>Filmes</h1>
+    <select id="selectCategoria">
+    <option value="#">Gênero</option>
+    <option value="acao">Ação</option>
+    <option value="romance">Romance</option>
+    <option value="adolescente">Adolescente</option>
+    <option value="comedia">Comédia</option>
+    </select>
+   </div>
+
+   <section>
+    <div class="movie-list-container" id="elenco">
+      <div class="heading" id="acao">
+        <p>Filmes emocionantes</p>
+      </div>
+
+      <div class="movie-list-wrapper">
+        <span class="leftArrow"><img src="../image/seta esquerda.png" alt="Seta direita"
+            height="40px"></span>
+        <div class="movie-list">
+
+          <div class="movie-list-item">
+            <img src="../image/movies/o menino do pijama listrado.png" alt="os bad boys" class="movie-list-item-img">
+            <span class="movie-list-item-title">O MENINO DO PIJAMA LISTRADO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>O MENINO DO PIJAMA LISTRADO</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/cidade de deus.png" alt="a cidade de deus " class="movie-list-item-img">
+            <span class="movie-list-item-title">CIDADE DE DEUS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>CIDADE DE DEUS</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/a vida de madam.png" alt="Sobrenatural" class="movie-list-item-img">
+            <span class="movie-list-item-title">A VIDA DE MADAM</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>A VIDA DE MADAM</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/jobs.png" alt="jobs" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">STEVE JOBS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>STEVE JOBS</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/black mirror.png" alt="black mirror"
+              class="movie-list-item-img">
+            <span class="movie-list-item-title">BLACK MIRROR</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>BLACK MIRROR</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/o dilema das redes.png" alt="o dilema das redes" class="movie-list-item-img">
+            <span class="movie-list-item-title">O DILEMA DAS REDES</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O DILEMA DAS REDES</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/jogo da imitacao.png" alt="jogo da imitacao" class="movie-list-item-img">
+            <span class="movie-list-item-title">JOGO DA IMITAÇÃO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>JOGO DA IMITAÇÃO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          
+
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Milagre na cela 7.png" alt="milagre na cela 7" class="movie-list-item-img">
+            <span class="movie-list-item-title">MILAGRE NA CELA 7</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>MILAGRE NA CELA 7</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          
+        </div>
+        <span class="arrow"><img src="../image/seta direita.png" alt="Seta direita"
+            height="40px"></span>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="movie-list-container" id="elenco">
+      <div class="heading" id="acao">
+        <p>Sugestões de filmes de ação</p>
+      </div>
+
+      <div class="movie-list-wrapper">
+        <span class="leftArrow"><img src="../image/seta esquerda.png" alt="Seta direita"
+            height="40px"></span>
+        <div class="movie-list">
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/o infiltrado.png" alt="o infiltrado" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">O INFILTRADO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O INFILTRADO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o protetor.png" alt="o protetor" class="movie-list-item-img">
+            <span class="movie-list-item-title">O PROTETOR</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O PROTETOR</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o assassino a preço fixo2.jpg" alt="assasino a preco fixo"
+              class="movie-list-item-img">
+            <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>ASSASSINO A PREÇO FIXO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/swat.png" alt="lupin" class="movie-list-item-img">
+            <span class="movie-list-item-title">SWAT</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SWAT</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/os bad boys.png" alt="os bad boys" class="movie-list-item-img">
+            <span class="movie-list-item-title">OS BAD BOYS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>OS BAD BOYS</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Donzela.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+            <span class="movie-list-item-title">DONZELA</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>DONZELA</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/dna do crime.jpg" alt="acott-personagem" class="movie-list-item-img">
+            <span class="movie-list-item-title">DNA DO CRIME</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>DNA DO CRIME</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Sobrenatural.jpg" alt="Sobrenatural" class="movie-list-item-img">
+            <span class="movie-list-item-title">SOBRENATURAL</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SOBRENATURAL</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+        </div>
+        <span class="arrow"><img src="../image/seta direita.png" alt="Seta direita"
+            height="40px"></span>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="movie-list-container" id="elenco">
+      <div class="heading" id="acao">
+        <p>Fimes romanticos</p>
+      </div>
+
+      <div class="movie-list-wrapper">
+        <span class="leftArrow"><img src="../image/seta esquerda.png" alt="Seta direita"
+            height="40px"></span>
+        <div class="movie-list">
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/continencia do amor.png" alt="continencia do amor" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">CONTINÊNCIA DO AMOR </span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>CONTINÊNCIA DO AMOR </p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/crush a altura.png" alt="para todos os garotos que já amei" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">CRUSH AS ALTURAS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>CRUSH AS ALTURAS</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/para todos os garotos que ja amei.png" alt="para todos os garotos que já amei" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">PARA TODOS OS GAROTOS QUE JÁ AMEI</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>PARA TODOS OS GAROTOS QUE JÁ AMEI</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/a princesa e a plebeia.jpg" alt="a princesa e a plebeia " class="movie-list-item-img">
+            <span class="movie-list-item-title">A PRINCESA E A PLEBEIA</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>A PRINCESA E A PLEBEIA</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/Amor-com-data-marcada.jpg" alt="assasino a preco fixo"
+              class="movie-list-item-img">
+            <span class="movie-list-item-title">AMOR COM DATA MARCADA</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>AMOR COM DATA MARCADA</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/barraca do beijo.jpg" alt="barraca do beijo" class="movie-list-item-img">
+            <span class="movie-list-item-title">BARRACA DO BEIJO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>BARRACA DO BEIJO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/after para sempre.jpg" alt="after para sempre" class="movie-list-item-img">
+            <span class="movie-list-item-title">AFTER PARA SEMPRE</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>AFTER PARA SEMPRE</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/como eu era antes de você.jpg" alt="como eu era antes de você" class="movie-list-item-img">
+            <span class="movie-list-item-title">COMO EU ERA ANTES DE VOCÊ</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>COMO EU ERA ANTES DE VOCÊ</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/de repente 30.jpg" alt="de repente 30" class="movie-list-item-img">
+            <span class="movie-list-item-title">DE REPENDE 30</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>DE REPENDE 30</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/o date perfeito.png" alt="date perfeito" class="movie-list-item-img">
+            <span class="movie-list-item-title">O DATE PERFEITO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O DATE PERFEITO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+        </div>
+        <span class="arrow"><img src="../image/seta direita.png" alt="Seta direita"
+            height="40px"></span>
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+  <section>
+    <div class="movie-list-container" id="elenco">
+      <div class="heading" id="acao">
+        <p>Sugestões de filmes de ação</p>
+      </div>
+
+      <div class="movie-list-wrapper">
+        <span class="leftArrow"><img src="../image/seta esquerda.png" alt="Seta direita"
+            height="40px"></span>
+        <div class="movie-list">
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/o infiltrado.png" alt="o infiltrado" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">O INFILTRADO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O INFILTRADO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o protetor.png" alt="o protetor" class="movie-list-item-img">
+            <span class="movie-list-item-title">O PROTETOR</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O PROTETOR</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o assassino a preço fixo2.jpg" alt="assasino a preco fixo"
+              class="movie-list-item-img">
+            <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>ASSASSINO A PREÇO FIXO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/swat.png" alt="lupin" class="movie-list-item-img">
+            <span class="movie-list-item-title">SWAT</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SWAT</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/os bad boys.png" alt="os bad boys" class="movie-list-item-img">
+            <span class="movie-list-item-title">OS BAD BOYS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>OS BAD BOYS</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Donzela.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+            <span class="movie-list-item-title">DONZELA</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>DONZELA</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/dna do crime.jpg" alt="acott-personagem" class="movie-list-item-img">
+            <span class="movie-list-item-title">DNA DO CRIME</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>DNA DO CRIME</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Sobrenatural.jpg" alt="Sobrenatural" class="movie-list-item-img">
+            <span class="movie-list-item-title">SOBRENATURAL</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SOBRENATURAL</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+        </div>
+        <span class="arrow"><img src="../image/seta direita.png" alt="Seta direita"
+            height="40px"></span>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="movie-list-container" id="elenco">
+      <div class="heading" id="acao">
+        <p>Sugestões de filmes de ação</p>
+      </div>
+
+      <div class="movie-list-wrapper">
+        <span class="leftArrow"><img src="../image/seta esquerda.png" alt="Seta direita"
+            height="40px"></span>
+        <div class="movie-list">
+          <div class="movie-list-item">
+            <a href="https://youtu.be/VUi2OHA0_sw?si=8FJ1mGGM4dj82Gyy">
+              <img src="../image/movies/o infiltrado.png" alt="o infiltrado" class="movie-list-item-img" title="Clique aqui e assista o trailer"></a>
+            <span class="movie-list-item-title">O INFILTRADO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O INFILTRADO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o protetor.png" alt="o protetor" class="movie-list-item-img">
+            <span class="movie-list-item-title">O PROTETOR</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>O PROTETOR</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+          <div class="movie-list-item">
+            <img src="../image/movies/o assassino a preço fixo2.jpg" alt="assasino a preco fixo"
+              class="movie-list-item-img">
+            <span class="movie-list-item-title">ASSASSINO A PREÇO FIXO</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>ASSASSINO A PREÇO FIXO</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/swat.png" alt="lupin" class="movie-list-item-img">
+            <span class="movie-list-item-title">SWAT</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SWAT</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/os bad boys.png" alt="os bad boys" class="movie-list-item-img">
+            <span class="movie-list-item-title">OS BAD BOYS</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>OS BAD BOYS</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Donzela.png" alt="filme velozes e furiosos9" class="movie-list-item-img">
+            <span class="movie-list-item-title">DONZELA</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam
+            <div class="movie-list-item-subdesc">
+              <p>DONZELA</p>
+              <p>Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/dna do crime.jpg" alt="acott-personagem" class="movie-list-item-img">
+            <span class="movie-list-item-title">DNA DO CRIME</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>DNA DO CRIME</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+
+          <div class="movie-list-item">
+            <img src="../image/movies/Sobrenatural.jpg" alt="Sobrenatural" class="movie-list-item-img">
+            <span class="movie-list-item-title">SOBRENATURAL</span>
+            <p class="movie-list-item-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem nostrum, doloremque
+              deserunt quae totam, pariatur doloribus aspernatur </p>
+
+            <div class="movie-list-item-subdesc">
+              <p>SOBRENATURAL</p>
+              <p> Action | 120min</p>
+            </div>
+          </div>
+        </div>
+        <span class="arrow"><img src="../image/seta direita.png" alt="Seta direita"
+            height="40px"></span>
+
+      </div>
+    </div>
+  </section>
+
+    <section class="footer">
+      <center>
+        <div class="content-footer">
+          <div class="logo">
+            <h1>Movie Sense</h1>
+          </div>
+          <div class="content-descricao-footer">
+            <p>Termos e avisos de privacidade</p>
+            <p>Envie-nos comentários</p>
+            <p>Codyrigth ©2023 CodeOpacity.</p>
+          </div>
+          <div class="icons-footer">
+            <li><a href="#">
+            <li><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-email"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://github.com/raygrs/movie-sense.git"><i class="fa fa-github"></i></a></li>
+          </div>
+        </div>
+      </center>
+    </section>
+</body>
+</html>
+<script src="/js/main.js"></script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autenticação</title>
+  <link rel="stylesheet" href="../../css/login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="../../js/sessao.js"></script>
+</head>
+
+<body>
+  <!-- sessao login -->
+  <section class="main-container login">
+    <center>
+      <div class="container">
+        <div class="login_box">
+          <h2>Entrar</h2>
+          <div class="input_box " id="input_user">
+            <input type="text" id="user_inp" class="user email validar" placeholder="E-mail">
+          </div>
+          <div class="input_box password" id="input_senha">
+            <input type="password" id="input_senha_" class="current-password password validar" placeholder="senha">
+            <i class="bi bi-eye-fill" id="iconPass" onclick="mostrarSenha()"></i>
+          </div>
+          <div class="button">
+            <button onclick="validacao()" class="submit button">Entrar</button>
+          </div>
+          <div id="mensagem"></div>
+          <div class="cadastre-se">
+            <span>Novo por aqui?</span><a href="../pages/cadastro.html"><button class="autenticacao"> cadastrar
+              </button></a>
+          </div>
+          <div class="terms">
+            <p>O acesso está protegido pelo Google reCAPTCHA para garantir que você não é um robô. <a href="">Saiba
+                mais</a></p>
+          </div>
+          <div class="sair">
+            <p>Deseja voltar para tela inicial? <a href="../../index.html">Sim</a></p>
+          </div>
+        </div>
+      </div>
+    </center>
+  </section>
+</body>
+
+</html>
+<script>
+  function mostrarSenha() {
+    const SENHA_INPUT = document.getElementById('input_senha_');
+    const ICON = document.getElementById('iconPass');
+
+    if (SENHA_INPUT.type === 'password') {
+      SENHA_INPUT.type = 'text';
+      ICON.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+    } else {
+      SENHA_INPUT.type = 'password';
+      ICON.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+    }
+  }
+
+  function entrar() {
+        var emailVar = user_inp.value;
+        var senhaVar = input_senha_.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            return false;
+        }
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    setTimeout(function () {
+                      window.location.href = "Cruzadinha.html";
+                    }, 1000); // apenas para exibir o loading
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function validacao() {
+    const USER = user_inp.value;
+    const SENHA = input_senha_.value;
+
+    if (USER == '' || SENHA == '') {
+      mensagem.innerHTML = 'Preencha todos os campos'
+      input_user.classList.add('erro_box');
+      input_senha.classList.add('erro_box');
+    } else {
+      if (USER.length < 6) {
+        input_user.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo email deve conter mais de 6 caracteres'
+      } else {
+        input_user.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+
+      if (SENHA.length < 6) {
+        input_senha.classList.add('erro_box');
+        mensagem.innerHTML = 'O campo senha deve conter mais de 6 caracteres'
+      } else {
+        input_senha.classList.remove('erro_box');
+        mensagem.innerHTML = '';
+      }
+      if (USER.indexOf('@') < 0) {
+        console.log('entrou no if');
+        mensagem.innerHTML = 'O campo email está inválido '
+        input_user.classList.add('erro_box');
+      }else {
+        // Todas as validações passaram, redirecione para a página da cruzadinha
+        entrar();
+      }
+    }
+  }
+</script>

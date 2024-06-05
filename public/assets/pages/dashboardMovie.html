@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../../css/dashboardMovie.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <i class="bx bxl-codepen"></i>
+        <span>MovieSense</span>
+      </div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <div class="user">
+      <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="me" class="user-img">
+      <div>
+        <p class="bold">Clint B.</p>
+        <p>Admin</p>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <i class="bx bxs-grid-alt"></i>
+          <span class="nav-item">Dashboard</span>
+          <span class="tooltip">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="bx bxs-shopping-bag"></i>
+          <span class="nav-item">Products</span>
+          <span class="tooltip">Products</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-list-check"></i>
+          <span class="nav-item">Categories</span>
+          <span class="tooltip">Categories</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="bx bxs-cog"></i>
+          <span class="nav-item">Settings</span>
+          <span class="tooltip">Settings</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="../../index.html">
+          <i class="bx bxs-log-out"></i>
+          <span class="nav-item">Logout</span>
+          <span class="tooltip">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="inicio">
+      <h1>Análise e interpretação de dados</h1>
+      <span>Com base nos dados da cruzadinha</span>
+    </div>
+    <div class="container">
+
+      <div class="usuariosTotais">
+        <h2>Total de usuários cadastrados</h2>
+        <span>30</span>
+      </div>
+
+      <div class="mediaPontos">
+        <h2>Média de pontos</h2>
+        <span>30</span>
+      </div>
+
+      <div class="tentativas">
+        <h2>Tentativas</h2>
+        <span>3</span>
+      </div>
+
+      <div class="menorTempo">
+        <h2>Menor tempo realizado</h2>
+        <span>3</span>
+      </div>
+    </div>
+
+    <div class="graficosChartJs">
+      <div class="charts">
+        <div class="chart">
+          <h3>Cadastros diários</h3>
+          <canvas id="myChartLine"></canvas>
+        </div>
+
+        <div class="chart" id="umidade-chart">
+          <h3>Média de acertos na cruzadinha</h3>
+          <canvas id="myChartBar"></canvas>
+        </div>
+
+        <div class="chart pie">
+          <h3>Questões que mais erraram</h3>
+          <canvas id="myChartPie"></canvas>
+        </div>
+
+        <div class="chart pie">
+          <h3>Recorde de tempo</h3>
+          <canvas id="myChartPie2"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  let btn = document.querySelector('#btn');
+  let sidebar = document.querySelector('.sidebar')
+  btn.onclick = function () {
+    sidebar.classList.toggle('active');
+  };
+</script>
+<script src="./../../js/chart.js"></script>
+
+</html>
