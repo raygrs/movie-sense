@@ -8,9 +8,9 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
     color: aliceblue;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Poppins', sans-serif;   
     background-image: url(/assets/img/o\ infiltrado.png); 
     background-position: 50%;
@@ -18,14 +18,14 @@ body {
 }
 
 .main-container{
-    background-color:#000000ed;
+    /* background-color:#191919ea; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 .correct-Border{
-    box-shadow: 0 0 150px rgba(89, 255, 0, 0.39);
+    box-shadow: 0 0 150px rgba(89, 255, 0, 0.292);
 }
 .orange-Border{
     box-shadow: 0 0 50px rgba(162, 107, 45, 0.992);
@@ -33,9 +33,14 @@ body {
 .incorrect-Border{
     box-shadow: 0 0 50px rgba(255, 1, 1, 0.426);
 }
+.resultadoMensagem{
+    color: #5e6e6f;
+    font-weight: 700;
+}
 .container{
     /* display: flex; */
     justify-content: center;
+    background-color:#191919ea;
     align-items: center;
     max-width: 700px;
     max-height: 800px;
@@ -45,10 +50,11 @@ body {
 
 }
 
-.question-container span {
-    /* display: flex;
+.question-container {
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    flex-direction: column;
     font-size: 17px;
     margin-top: 40px;
     margin-bottom: 2rem;
@@ -72,7 +78,6 @@ body {
 }
 
 .button {
-    background: transparent;
     color: #ffffff;
     font-size: 16px;
     border: 0;
@@ -82,8 +87,7 @@ body {
     transition: .5s;
     /* border: 2px solid rgb(82, 82, 82); */
     border-radius: 6px;
-    box-shadow: 0 0 1px 1px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.886);
     /* width: 30%; */
     /* margin-top: 2rem; */
     
@@ -126,7 +130,7 @@ body {
 }
 
 .correct {
-    border: 2px solid rgba(26, 255, 18, 0.822);
+    border: 2px solid rgba(26, 255, 18, 0.685);
     box-shadow: 0 0 10px rgba(26, 255, 18, 0.493);
 }
 
@@ -136,3 +140,47 @@ body {
     color: rgba(125, 125, 125, 0.597);
 }
 
+/* footer */
+.content-footer{
+    padding: 4rem;
+    cursor: pointer;
+  }
+  .content-footer h1{
+    margin-bottom: 2rem;
+  }
+  .content-footer .content-descricao-footer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: #5e5e5e;
+  }
+  .content-footer .content-descricao-footer p:hover{
+    color: #fff;
+  }
+  .icons-footer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: .8rem;
+    cursor: pointer;
+  }
+  .icons-footer li{
+    list-style: none;
+  }
+  .icons-footer li a{
+    color: #fff;
+  }
+  .icons-footer li i{
+    font-size: 1.4rem;
+    color: #fff;
+  }
+  .footer .sair{
+    margin-bottom: 3rem;
+    margin-top: -2rem;
+  }
+  .footer .sair a{
+    list-style: none;
+    text-decoration: none;
+    font-weight: 800;
+    color: #5b1b1b;
+  }

@@ -6,7 +6,7 @@ const question = document.querySelector('.question-container');
 const answersContainer = document.querySelector(".answers-container");
 const questionText = document.querySelector(".question");
 const nextQuestionButton = document.querySelector(".next");
-const container = document.querySelector(".main-container")
+const container = document.querySelector(".container")
 
 start.addEventListener('click', play);
 nextQuestionButton.addEventListener('click', nextQuestion)
@@ -86,22 +86,22 @@ function finish() {
     switch (true) {
         case (perfomace >= 90):
             message = 'você realmente é viciado em série hein :)'
-            container.classList.add('.correct-Border');
+            container.classList.add('correct-Border');
             break
         case (perfomace >= 50):
             message = 'Maratona está em dia'
-            container.classList.add('.orange-Border');
+            container.classList.add('orange-Border');
             break
         default:
             message = 'Você quase nunca assiste série'
-            container.classList.add('.incorrect-Border');
+            container.classList.add('incorrect-Border');
     }
 
 
-    question.innerHTML = `<p class="mensagem">
-    Você acertou ${totalCorrect} de ${totalQuestions} questões!
-    <span> Resultado: ${message}</span>
-    </p>
+    question.innerHTML = `<span class="mensagem">
+    Você acertou ${totalCorrect} de ${totalQuestions} questões!<br>
+    <span class="resultadoMensagem"> Resultado: ${message}</span>
+    </span>
     <button class="button reload" onclick=window.location.reload()> Refazer teste </button>`
 }
 
