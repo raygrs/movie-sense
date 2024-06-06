@@ -284,13 +284,9 @@ function validar() {
 }
 
 function submit() {
-    if (pontos === 12) {
         alert(`Parabéns você completou a cruzadinha corretamente`);
 
-    } else {
-        alert('palavras cruzadas incompleta')
-        content.classList.add('error-Border');
-    }
+        window.location.href = "dashboardMovie.html";
 }
 
 function dicas() {

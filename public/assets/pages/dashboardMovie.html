@@ -8,8 +8,11 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="../../css/dashboardMovie.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
     integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -18,15 +21,15 @@
   <div class="sidebar">
     <div class="top">
       <div class="logo">
-        <i class="bx bxl-codepen"></i>
-        <span>MovieSense</span>
+        <img src="../image/movie_logo.png" alt="" width="170px" height="20px">
+        <!-- <span>MovieSense</span> -->
       </div>
       <i class="bx bx-menu" id="btn"></i>
     </div>
     <div class="user">
       <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="me" class="user-img">
       <div>
-        <p class="bold">Clint B.</p>
+        <p class="bold">Bem vindo(a).</p>
         <p>Admin</p>
       </div>
     </div>
@@ -80,50 +83,68 @@
     <div class="container">
 
       <div class="usuariosTotais">
-        <h2>Total de usuários cadastrados</h2>
-        <span>30</span>
+        <span>Total de usuários cadastrados</span>
+        <h2>30</h2>
       </div>
 
       <div class="mediaPontos">
-        <h2>Média de pontos</h2>
-        <span>30</span>
+        <span>Média de pontos</span>
+        <h2>30</h2>
       </div>
 
       <div class="tentativas">
-        <h2>Tentativas</h2>
-        <span>3</span>
+        <span>Média de tempo realizado</span>
+        <h2>3</h2>
       </div>
 
       <div class="menorTempo">
-        <h2>Menor tempo realizado</h2>
-        <span>3</span>
+        <span>Tempo Recorde</span>
+        <h2>3</h2>
       </div>
     </div>
 
     <div class="graficosChartJs">
       <div class="charts">
         <div class="chart">
-          <h3>Cadastros diários</h3>
+          <span>Cadastros diários</span>
           <canvas id="myChartLine"></canvas>
         </div>
 
         <div class="chart" id="umidade-chart">
-          <h3>Média de acertos na cruzadinha</h3>
+          <span>Média de acertos na cruzadinha</span>
           <canvas id="myChartBar"></canvas>
         </div>
 
         <div class="chart pie">
-          <h3>Questões que mais erraram</h3>
-          <canvas id="myChartPie"></canvas>
-        </div>
-
-        <div class="chart pie">
-          <h3>Recorde de tempo</h3>
+          <span>Recorde de tempo</span>
           <canvas id="myChartPie2"></canvas>
         </div>
       </div>
     </div>
   </div>
+  <div class="footer">
+    <center>
+      <div class="content-footer">
+        <div class="logo">
+          <h1>Movie Sense</h1>
+        </div>
+        <div class="content-descricao-footer">
+          <p>Termos e avisos de privacidade</p>
+          <p>Envie-nos comentários</p>
+          <p>Codyrigth ©2023 CodeOpacity.</p>
+        </div>
+        <div class="icons-footer">
+          <li><a href="#">
+          <li><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-email"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://github.com/raygrs/movie-sense.git"><i class="fa fa-github"></i></a></li>
+        </div>
+      </div>
+    </center>
+  </div>
+
+ 
 </body>
 <script>
   let btn = document.querySelector('#btn');
