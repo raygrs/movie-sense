@@ -1,4 +1,5 @@
-function relogio() {
+const relogio = document.querySelector('.relogio');
+function cronometro() {
     function criaHoraDosSegundos(segundos) {
         const data = new Date(segundos * 1000);
         return data.toLocaleTimeString('pt-BR', {
@@ -7,7 +8,6 @@ function relogio() {
         });
     }
 
-    const relogio = document.querySelector('.relogio');
     let segundos = 0;
     let timer;
 
@@ -48,7 +48,7 @@ function relogio() {
         }
     });
 }
-relogio();
+cronometro();
 
 let pontos = 0;
 let content = document.querySelector('.content')
@@ -283,12 +283,46 @@ function validar() {
     }
 }
 
-function submit() {
-        alert(`Parabéns você completou a cruzadinha corretamente`);
+function publicar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
 
-        window.location.href = "dashboardMovie.html";
+    var corpo = {
+        pontos: pontos,
+        tempoDemorado: relogio.textContent
+    }
+
+    fetch(`/aquarios/publicar-cruzadinha/${idUsuario}`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Pontos cadastrados pelo usuario" + sessionStorage.NOME_USUARIO);
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
 }
 
+
+function submit() {
+        alert(`Parabéns você completou a cruzadinha corretamente com ${pontos} e no tempo de ${relogio.textContent}`);
+        publicar();
+        window.location.href = "dashboardMovie.html";
+        }
+        
 function dicas() {
     var selectDicas = document.getElementById('dicas');
     var divDica = document.getElementById('styleDicas');

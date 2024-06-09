@@ -1,9 +1,25 @@
 var aquarioModel = require("../models/aquarioModel");
 
-function buscarAquariosPorEmpresa(req, res) {
+function buscarPontosDoQuiz(req, res) {
   var idUsuario = req.params.idUsuario;
 
-  aquarioModel.buscarAquariosPorEmpresa(idUsuario).then((resultado) => {
+  aquarioModel.buscarPontosDoQuiz(idUsuario).then((resultado) => {
+    if (resultado.length > 0) {
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
+function buscarPontosDaCruzadinha(req, res) {
+  var idUsuario = req.params.idUsuario;
+
+  aquarioModel.buscarPontosDaCruzadinha(idUsuario).then((resultado) => {
     if (resultado.length > 0) {
       res.status(200).json(resultado);
     } else {
@@ -43,7 +59,63 @@ function cadastrar(req, res) {
   }
 }
 
+function publicarCruzadinha(req, res) {
+  var idUsuario = req.params.idUsuario;
+  var pontos = req.body.pontos;
+  var tempoDemorado = req.body.tempoDemorado;
+
+  if (pontos == undefined) {
+      res.status(400).send("Os pontos estão indefinido!");
+  } else if (tempoDemorado == undefined) {
+      res.status(400).send("O tempo demorado está indefinido!");
+  } else if (idUsuario == undefined) {
+      res.status(403).send("O id do usuário está indefinido!");
+  } else {
+      aquarioModel.publicarCruzadinha(idUsuario, pontos, tempoDemorado)
+          .then(
+              function (resultado) {
+                  res.json(resultado);
+              }
+          )
+          .catch(
+              function (erro) {
+                  console.log(erro);
+                  console.log("Houve um erro ao realizar o post: ", erro.sqlMessage);
+                  res.status(500).json(erro.sqlMessage);
+              }
+          );
+  }
+}
+
+function publicarQuiz(req, res) {
+  var idUsuario = req.params.idUsuario;
+  var pontos = req.body.pontos;
+
+  if (pontos == undefined) {
+      res.status(400).send("Os pontos estão indefinido!");
+  }else if (idUsuario == undefined) {
+      res.status(403).send("O id do usuário está indefinido!");
+  } else {
+      aquarioModel.publicarQuiz(idUsuario, pontos)
+          .then(
+              function (resultado) {
+                  res.json(resultado);
+              }
+          )
+          .catch(
+              function (erro) {
+                  console.log(erro);
+                  console.log("Houve um erro ao realizar o post: ", erro.sqlMessage);
+                  res.status(500).json(erro.sqlMessage);
+              }
+          );
+  }
+}
+
 module.exports = {
-  buscarAquariosPorEmpresa,
-  cadastrar
+  buscarPontosDaCruzadinha,
+  buscarPontosDoQuiz,
+  cadastrar,
+  publicarCruzadinha,
+  publicarQuiz
 }

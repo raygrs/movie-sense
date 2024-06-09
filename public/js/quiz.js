@@ -11,7 +11,7 @@ const container = document.querySelector(".container")
 start.addEventListener('click', play);
 nextQuestionButton.addEventListener('click', nextQuestion)
 
-let totalCorrect = 0;
+let pontos = 0;
 let perguntaAtual = 0;
 
 
@@ -23,7 +23,6 @@ function play() {
 }
 
 function nextQuestion() {
-
     resetState();
     if (questions.length === perguntaAtual) {
         return finish();
@@ -58,7 +57,7 @@ function selectAnswer(event) {
 
     if (answerClicked.dataset.correct) {
         container.classList.add('correct-Border');
-        totalCorrect += 1;
+        pontos += 1;
     } else {
         container.classList.remove("correct-Border");
         container.classList.add('incorrect-Border');
@@ -79,7 +78,7 @@ function selectAnswer(event) {
 
 function finish() {
     const totalQuestions = questions.length;
-    const perfomace = Math.floor(totalCorrect * 100 / totalQuestions)
+    const perfomace = Math.floor(pontos * 100 / totalQuestions)
 
     let message = '';
 
@@ -99,10 +98,44 @@ function finish() {
 
 
     question.innerHTML = `<span class="mensagem">
-    Você acertou ${totalCorrect} de ${totalQuestions} questões!<br>
+    Você acertou ${pontos} de ${totalQuestions} questões!<br>
     <span class="resultadoMensagem"> Resultado: ${message}</span>
     </span>
     <button class="button reload" onclick=window.location.reload()> Refazer teste </button>`
+
+    publicar();
+}
+
+function publicar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+
+    var corpo = {
+        pontos: pontos
+    }
+
+    fetch(`/aquarios/publicar-quiz/${idUsuario}`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Pontos cadastrados pelo usuario" + sessionStorage.NOME_USUARIO);
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
 }
 
 const questions = [
@@ -215,4 +248,6 @@ const questions = [
 
         ]
     }
+
+
 ]
