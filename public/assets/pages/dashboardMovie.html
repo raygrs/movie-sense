@@ -83,37 +83,39 @@
     <div class="container">
 
       <div class="usuariosTotais">
-        <span>Total de usuários cadastrados</span>
-        <h2>30</h2>
+        <span>Média de pontos quiz</span>
+        <h2 id="mediaPontosQuiz">30</h2>
       </div>
 
       <div class="mediaPontos">
-        <span>Média de pontos</span>
-        <h2>30</h2>
+        <span>Média de pontos cruzadinha</span>
+        <h2 id="mediaPontosCruzadinha">30</h2>
       </div>
 
       <div class="tentativas">
-        <span>Média de tempo realizado</span>
-        <h2>3</h2>
+        <span>Menor tempo realizado (cruzadinha)</span>
+        <h2 id="menorTempoRealizado">3</h2>
       </div>
 
-      <div class="usuariosTotais">
-        <span>Total de usuários cadastrados</span>
-        <h2>30</h2>
+      <div class="tentativas">
+        <span>Total de pontos</span>
+        <h2 id="totalPontos">3</h2>
       </div>
+
+      
 
     </div>
 
     <div class="graficosChartJs">
       <div class="charts">
         <div class="chart">
-          <span>Usuários cadastrados por dia</span>
-          <canvas id="myChartLine"></canvas>
+          <span>Média de pontuação do quiz</span>
+          <canvas id="chartQuiz"></canvas>
         </div> 
 
         <div class="chart" id="umidade-chart">
-          <span>Média de pontuações</span>
-          <canvas id="myChartBar"></canvas>
+          <span>Média de pontuação da cruzadinha </span>
+          <canvas id="chartCruzadinha"></canvas>
         </div>
 
         <!-- <div class="chart pie">

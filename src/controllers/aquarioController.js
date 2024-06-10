@@ -16,10 +16,40 @@ function buscarPontosDoQuiz(req, res) {
   });
 }
 
+function buscarTotalPontos(req, res){
+  var idUsuario = req.params.idUsuario;
+  aquarioModel.buscarTotalPontos(idUsuario).then((resultado) => {
+    if (resultado.length > 0) {
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
 function buscarPontosDaCruzadinha(req, res) {
   var idUsuario = req.params.idUsuario;
 
   aquarioModel.buscarPontosDaCruzadinha(idUsuario).then((resultado) => {
+    if (resultado.length > 0) {
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
+function buscarMenorTempoRealizado(req, res){
+  var idUsuario = req.params.idUsuario;
+  aquarioModel.buscarMenorTempoRealizado(idUsuario).then((resultado) => {
     if (resultado.length > 0) {
       res.status(200).json(resultado);
     } else {
@@ -112,10 +142,46 @@ function publicarQuiz(req, res) {
   }
 }
 
+function buscarMediaPontosDoQuiz(req, res){
+    var idUsuario = req.params.idUsuario;
+    aquarioModel.buscarMediaPontosDoQuiz(idUsuario).then((resultado) => {
+      if (resultado.length > 0) {
+        res.status(200).json(resultado);
+      } else {
+        res.status(204).json([]);
+      }
+    }).catch(function (erro) {
+      console.log(erro);
+      console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+      res.status(500).json(erro.sqlMessage);
+    });
+
+}
+
+function buscarMediaPontosDaCruzadinha(req, res){
+  var idUsuario = req.params.idUsuario;
+  aquarioModel.buscarMediaPontosDaCruzadinha(idUsuario).then((resultado) => {
+    if (resultado.length > 0) {
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao buscar os aquarios: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+
+}
+
 module.exports = {
   buscarPontosDaCruzadinha,
   buscarPontosDoQuiz,
   cadastrar,
   publicarCruzadinha,
-  publicarQuiz
+  publicarQuiz,
+  buscarMediaPontosDoQuiz,
+  buscarMediaPontosDaCruzadinha,
+  buscarMenorTempoRealizado,
+  buscarTotalPontos
 }

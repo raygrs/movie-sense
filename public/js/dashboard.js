@@ -1,51 +1,23 @@
-const ctx = document.getElementById('myChartBar');
+const quizChart = document.getElementById('chartQuiz');
+const cruzadinhaChart = document.getElementById('chartCruzadinha');
 const labelsQuiz = [];
 const dataQuiz = [];
 const labelsCruzadinha = [];
 const dataCruzadinha = [];
-
-// const mediaPontosChart = document.getElementById('myChartPie');
-// new Chart(mediaPontosChart, {
-//   type: 'pie',
-//   data: {
-//     labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
-//     datasets: [{
-//       label: 'Temperatura',
-//       data: [temp[0], temp[1], temp[2], temp[3], temp[4], temp[5]],
-//       backgroundColor: [
-//         '#ff6384',
-//         '#36a2eb',
-//         '#cc65fe',
-//         '#ffce56',
-//         '#ff9f40',
-//         '#ff6384'
-//       ],
-//       borderColor: [
-//         '#ff6384',
-//         '#36a2eb',
-//         '#cc65fe',
-//         '#ffce56',
-//         '#ff9f40',
-//         '#ff6384'
-//       ],
-//       borderWidth: 1
-//     }]
-//   }
-// });
-
 const idUsuario = sessionStorage.ID_USUARIO;
+
 
 function obterDadosQuiz(idUsuario) {
 
   fetch(`/aquarios/buscando-pontos-quiz/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
     if (response.ok) {
       response.json().then(function (resposta) {
-        for (let i = 0; i < resposta.length; i++) {
+        for (let i = resposta.length - 1; i >= 0; i--) {
           const partida = resposta[i];
-          labelsQuiz.push(partida.idPontuacao);
+          labelsQuiz.push(partida.momento);
           dataQuiz.push(partida.pontos);
-          }
-          grafico.update();
+        }
+        graficoQuiz.update();
       });
     } else {
       console.error('Nenhum dado encontrado ou erro na API');
@@ -55,19 +27,19 @@ function obterDadosQuiz(idUsuario) {
       console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
     });
 
-    }
-    
-    function obterDadosCruzadinha(idUsuario) {
-      
-      fetch(`/aquarios/buscando-pontos-cruzadinha/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
-        if (response.ok) {
-          response.json().then(function (resposta) {
-            for (let i = 0; i < resposta.length; i++) {
-              const partida = resposta[i];
-              labelsCruzadinha.push(partida.idPontuacao);
-              dataCruzadinha.push(partida.pontos);
+}
+
+function obterDadosCruzadinha(idUsuario) {
+
+  fetch(`/aquarios/buscando-pontos-cruzadinha/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        for (let i = resposta.length - 1; i >= 0; i--) {
+          const partida = resposta[i];
+          labelsCruzadinha.push(partida.momento);
+          dataCruzadinha.push(partida.pontos);
         }
-        grafico.update();
+        graficoCruzadinha.update();
       });
     } else {
       console.error('Nenhum dado encontrado ou erro na API');
@@ -77,23 +49,103 @@ function obterDadosQuiz(idUsuario) {
       console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
     });
 }
-          
-  const grafico = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labelsQuiz,
-      datasets: [{
-        label: 'Pontuação quiz',
-        data: dataQuiz,
-        backgroundColor: '#7FA9C7',
-        },
-      {
-        label: 'Pontuação Cruzadinha',
-        data: dataCruzadinha,
-        backgroundColor: '#000',
-      }]
-    },
-  })
 
-  obterDadosCruzadinha(idUsuario);
-  obterDadosQuiz(idUsuario);
+function obterMediaQuiz(idUsuario) {
+
+  fetch(`/aquarios/buscando-media-pontos-quiz/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        const mediaPontos = resposta[0].mediaPontos;
+        const mediaPontosFormatado = Math.round(mediaPontos);
+        mediaPontosQuiz.innerHTML = mediaPontosFormatado;
+      });
+    } else {
+      console.error('Nenhum dado encontrado ou erro na API');
+    }
+  })
+    .catch(function (error) {
+      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+
+function obterMenorTempo(idUsuario) {
+  fetch(`/aquarios/buscando-menor-tempo-realizado/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        const menorTempo = resposta[0].tempoDemorado;
+        const menorTempoFormatado  = menorTempo.slice(3);
+        menorTempoRealizado.innerHTML = menorTempoFormatado;
+      });
+    } else {
+      console.error('Nenhum dado encontrado ou erro na API');
+    }
+  })
+    .catch(function (error) {
+      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+obterMenorTempo(idUsuario);
+
+function obterMediaCruzadinha(idUsuario) {
+
+  fetch(`/aquarios/buscando-media-pontos-cruzadinha/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        const mediaPontos = resposta[0].mediaPontos;
+        const mediaPontosFormatado = Math.round(mediaPontos);
+        mediaPontosCruzadinha.innerHTML = mediaPontosFormatado;
+      });
+    } else {
+      console.error('Nenhum dado encontrado ou erro na API');
+    }
+  })
+    .catch(function (error) {
+      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+
+function obterTotalPontos (idUsuario) {
+  fetch(`/aquarios/buscando-total-pontos/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        const total = resposta[0].pontosTotal;
+        totalPontos.innerHTML = total;
+      });
+    } else {
+      console.error('Nenhum dado encontrado ou erro na API');
+    }
+  })
+    .catch(function (error) {
+      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    });
+}
+obterTotalPontos(idUsuario);
+obterMediaQuiz(idUsuario);
+obterMediaCruzadinha(idUsuario);
+
+const graficoQuiz = new Chart(quizChart, {
+  type: 'bar',
+  data: {
+    labels: labelsQuiz,
+    datasets: [{
+      label: 'Pontuação quiz',
+      data: dataQuiz,
+      backgroundColor: '#7FA9C7',
+    }]
+  },
+});
+
+const graficoCruzadinha = new Chart(cruzadinhaChart, {
+  type: 'bar',
+  data: {
+    labels: labelsCruzadinha,
+    datasets: [{
+      label: 'Pontuação cruzadinha',
+      data: dataCruzadinha,
+      backgroundColor: '#7FA9C7',
+    }]
+  },
+})
+
+obterDadosCruzadinha(idUsuario);
+obterDadosQuiz(idUsuario);

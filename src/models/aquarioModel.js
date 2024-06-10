@@ -8,6 +8,13 @@ function buscarAquariosPorEmpresa(empresaId) {
   return database.executar(instrucaoSql);
 }
 
+function buscarTotalPontos(idUsuario){
+  var instrucaoSql = `select sum(pontos) AS pontosTotal from pontuacao WHERE fkUsuario = ${idUsuario}`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 function cadastrar(empresaId, descricao) {
 
   var instrucaoSql = `INSERT INTO (descricao, fk_empresa) aquario VALUES (${descricao}, ${empresaId})`;
@@ -34,14 +41,34 @@ function publicarQuiz(idUsuario, pontos) {
   return database.executar(instrucaoSql);
 }
 
-function buscarPontosDoQuiz(empresaId) {
-  var instrucaoSql = `SELECT idPontuacao, pontos, momento FROM Pontuacao WHERE fkJogo = 1`;
+function buscarPontosDoQuiz(idUsuario) {
+  var instrucaoSql = `SELECT idPontuacao, pontos, date_format(momento, '%d/%m/%y ás %H:%i:%d') AS momento from Pontuacao WHERE fkjogo = 2 AND fkUsuario = ${idUsuario} ORDER BY idPontuacao DESC LIMIT 5`;
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 
-function buscarPontosDaCruzadinha(empresaId) {
-  var instrucaoSql = `SELECT idPontuacao, pontos, tempoDemorado, momento FROM Pontuacao where fkJogo = 2`;
+function buscarMenorTempoRealizado(idUsuario){
+  var instrucaoSql = `SELECT tempoDemorado from Pontuacao WHERE fkjogo = 1 AND fkUsuario = ${idUsuario} ORDER BY tempoDemorado LIMIT 1`;
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+function buscarPontosDaCruzadinha(idUsuario) {
+  var instrucaoSql = `SELECT idPontuacao, pontos, tempoDemorado, date_format(momento, '%d/%m/%y ás %H:%i:%d') AS momento from Pontuacao WHERE fkjogo = 1 AND fkUsuario = ${idUsuario} ORDER BY idPontuacao DESC LIMIT 5`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+function buscarMediaPontosDaCruzadinha(idUsuario) {
+  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM pontuacao WHERE fkJogo =  1 AND fkUsuario = ${idUsuario};`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
+function buscarMediaPontosDoQuiz(idUsuario) {
+  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM pontuacao WHERE fkJogo =  2 AND fkUsuario = ${idUsuario};`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -52,5 +79,9 @@ module.exports = {
   cadastrar,
   publicarCruzadinha,
   publicarQuiz,
-  buscarPontosDaCruzadinha
+  buscarPontosDaCruzadinha,
+  buscarMediaPontosDaCruzadinha,
+  buscarMediaPontosDoQuiz,
+  buscarMenorTempoRealizado,
+  buscarTotalPontos
 }

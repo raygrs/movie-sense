@@ -9,38 +9,34 @@ senha VARCHAR(45),
 repetirSenha VARCHAR(45)
 );
 
-INSERT INTO Usuario VALUES
-(DEFAULT, 'ray.grs', 'ray@grs25@gmail.com', '043009ray', '043009ray'),
-(DEFAULT, 'anneCruz', 'anne@grs25@gmail.com', '043009ane', '043009ane');
-
 select * from usuario;
 
 CREATE TABLE Jogo (
 idJogo INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(45),
-momento DATETIME
+nome VARCHAR(45)
 );
 
 INSERT INTO Jogo VALUES 
-(1, 'quiz', now()),
-(2, 'cruzadinha', now());
-
+(1, 'quiz'),
+(2, 'cruzadinha');
 
 
 CREATE TABLE Pontuacao (
-idPontuacao INT,
+idPontuacao INT AUTO_INCREMENT,
 fkUsuario INT,
 CONSTRAINT usuarioPontuacao FOREIGN KEY (fkUsuario) REFERENCES Usuario (idUsuario),
 fkJogo INT,
 CONSTRAINT jogoPontuacao FOREIGN KEY (fkJogo) REFERENCES Jogo (idJogo),
 CONSTRAINT pkComposta PRIMARY KEY (idPontuacao, fkUsuario, fkJogo),
 pontos INT,
-tempoDemorado TIME
+tempoDemorado TIME,
+momento DATETIME
 );
 
-INSERT INTO Pontuacao VALUES
-(1, 1, 1, 5, '01:10'),
-(2, 1, 1, 5, '02:00');
+select idPontuacao, pontos, tempoDemorado, momento from Pontuacao; 
+SELECT idPontuacao, pontos, momento FROM Pontuacao WHERE fkJogo = 1;
+
+ select * from Pontuacao;
 
 -- exibindo todos os dados 
 select * from usuario join pontuacao on usuario.idUsuario = pontuacao.fkUsuario
