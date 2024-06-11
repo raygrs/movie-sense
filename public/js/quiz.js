@@ -125,6 +125,7 @@ function publicar() {
 
         if (resposta.ok) {
             window.alert("Pontos cadastrados pelo usuario" + sessionStorage.NOME_USUARIO);
+            window.location.href = "dashboardMovie.html";
         } else if (resposta.status == 404) {
             window.alert("Deu 404!");
         } else {

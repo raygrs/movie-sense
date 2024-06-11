@@ -33,8 +33,19 @@ tempoDemorado TIME,
 momento DATETIME
 );
 
-select idPontuacao, pontos, tempoDemorado, momento from Pontuacao; 
+select * from jogo;
+select * from pontuacao;
+
+select idPontuacao, pontos, tempoDemorado, date_format(momento, '%d/%m/%y ás %H:%i:%d') AS momento from Pontuacao order by idPontuacao DESC limit 5; 
 SELECT idPontuacao, pontos, momento FROM Pontuacao WHERE fkJogo = 1;
+
+select AVG(pontos) from pontuacao where fkJogo =  2 AND fkUsuario = 2;
+
+-- 
+
+SELECT tempoDemorado from Pontuacao WHERE fkjogo = 1 AND fkUsuario = ${idUsuario} ORDER BY tempoDemorado LIMIT 1;
+
+select sum(pontos) as pontosTotal from pontuacao;
 
  select * from Pontuacao;
 

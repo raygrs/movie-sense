@@ -130,7 +130,7 @@ const graficoQuiz = new Chart(quizChart, {
     datasets: [{
       label: 'Pontuação quiz',
       data: dataQuiz,
-      backgroundColor: '#7FA9C7',
+      backgroundColor: 'rgb(23, 125, 131)',
     }]
   },
 });
@@ -142,7 +142,7 @@ const graficoCruzadinha = new Chart(cruzadinhaChart, {
     datasets: [{
       label: 'Pontuação cruzadinha',
       data: dataCruzadinha,
-      backgroundColor: '#7FA9C7',
+      backgroundColor: 'rgb(23, 125, 131)',
     }]
   },
 })
