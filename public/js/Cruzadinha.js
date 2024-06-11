@@ -337,12 +337,12 @@ function dicas() {
         "4- Inspirada em fatos reais, a série brasileira conta a história do maior assalto da história do Paraguai, que resultou em um rombo financeiro de quase R$ 60 milhões",
         "5- Daniel 'Hondo' Harrelson, é designado para liderar uma unidade do Esquadrão de Armas e Táticas Especiais na comunidade onde cresceu. Secretamente, ele fica dividido entre lealdade às ruas e aos seus irmãos de campo..",
         "6- Desde que foi abandonado em um orfanato, sempre teve uma vida muito dura. Agora, casado com Rasputia, sua vida é ainda pior. Mas tudo muda quando sua antiga namorada volta à cidade..",
-        "7- Scott se torna o único e verdadeiro...",
-        "8- Stiles é conhecido pelo seu... ",
-        "9- Quem foi o primeiro amor de scott",
-        "10- Quem foi o primeiro amor de scott",
-        "11- Quem foi o primeiro amor de scott",
-        "12- Uma caracteristica desse poder é o seus olhos azuis"
+        "7- é uma série de cinco filmes, dos gêneros fantasia e romance, lançados entre 2008 e 2012, pela Summit Entertainment, baseados nos quatro romances da série Twilight, da autora norte-americana Stephenie Meyer. Os filmes estrelam Kristen Stewart, Robert Pattinson e Taylor Lautner.",
+        "8- é uma franquia de mídia de suspense e ação neo-noir americana criada pelo roteirista Derek Kolstad e estrelada por Keanu Reeves como um ex-assassino que é forçado a voltar ao submundo do crime que havia abandonado",
+        "9- Um milionário tetraplégico contrata um homem da periferia para ser o seu acompanhante, apesar de sua aparente falta de preparo. No entanto, a relação que antes era profissional cresce e vira uma amizade que mudará a vida dos dois.",
+        "10- Bob Esponja e seu amigo Patrick, uma estrela do mar, embarcam em uma missão para limpar o nome do Sr. Sirigueijo, o proprietário do restaurante Siri Cascudo, que foi acusado de roubar a coroa do rei Netuno. Saindo dos limites familiares, Bob Esponja e Patrick aventuram-se para procurar a coroa de Netuno, mas encontrarão vários obstáculos no caminho.",
+        "11- Quando a árvore em que moram é derrubada e enviada para Los Angeles, os esquilos falantes encontram um novo lar na casa do compositor Dave Seville (Antti Jaakola). Apesar de um início conturbado com a nova situação doméstica, Dave descobre que as criaturas travessas sabem cantar muito bem.",
+        "12- Um artista pobre e uma jovem rica se conhecem e se apaixonam na fatídica viagem inaugural do Titanic em 1912. Embora esteja noiva do arrogante herdeiro de uma siderúrgica, a jovem desafia sua família e amigos em busca do verdadeiro amor."
     ];
 
     var valor_atual = parseInt(selectDicas.value);
