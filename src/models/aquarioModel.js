@@ -9,7 +9,7 @@ function buscarAquariosPorEmpresa(empresaId) {
 }
 
 function buscarTotalPontos(idUsuario){
-  var instrucaoSql = `select sum(pontos) AS pontosTotal from pontuacao WHERE fkUsuario = ${idUsuario}`;
+  var instrucaoSql = `select sum(pontos) AS pontosTotal from Pontuacao WHERE fkUsuario = ${idUsuario}`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -61,14 +61,14 @@ function buscarPontosDaCruzadinha(idUsuario) {
 }
 
 function buscarMediaPontosDaCruzadinha(idUsuario) {
-  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM pontuacao WHERE fkJogo =  1 AND fkUsuario = ${idUsuario};`;
+  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM Pontuacao WHERE fkJogo =  1 AND fkUsuario = ${idUsuario};`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 
 function buscarMediaPontosDoQuiz(idUsuario) {
-  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM pontuacao WHERE fkJogo =  2 AND fkUsuario = ${idUsuario};`;
+  var instrucaoSql = `SELECT AVG(pontos) AS mediaPontos FROM Pontuacao WHERE fkJogo =  2 AND fkUsuario = ${idUsuario};`;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
